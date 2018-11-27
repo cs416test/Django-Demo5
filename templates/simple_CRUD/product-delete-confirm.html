@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <h1>Sure?</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <h2>Are you sure that you want to delete {{ product.description }}</h2>
+        <input type="submit" value="Yes, I am sure!">
+
+    </form>
+
+
+
+
+{% endblock content %}
